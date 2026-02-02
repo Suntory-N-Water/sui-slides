@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "marp -s slides --html --allow-local-files",
-    "build": "marp slides --html --allow-local-files",
-    "pdf": "marp --pdf --allow-local-files"
+    "start": "marp -s slides --html --allow-local-files --theme-set ./themes",
+    "build": "marp slides --html --allow-local-files --theme-set ./themes",
+    "pdf": "marp --pdf --allow-local-files --theme-set ./themes"
+  },
+  "marp": {
+    "themeSet": "./themes"
   },
   "dependencies": {
     "@marp-team/marp-cli": "^4.2.3",

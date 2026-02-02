@@ -7,88 +7,78 @@ paginate: true
 <!-- _class: title -->
 ![bg](../assets/images/background.png)
 
-# Marpテンプレート
-## 全パターンサンプル
+# プロジェクト管理改革
+## アジャイル開発で変わる組織文化
 
-### Phase 1 - 14パターン実装
-作成日: 2025-02-02
-
----
-
-<!-- _class: agenda -->
-
-## サンプル目次
-
-1. タイトル・セクション系（5パターン）
-2. レイアウト系（7パターン）
-3. 強調・特殊系（2パターン）
-
----
-
-<!-- _class: section -->
-
-# A. タイトル・セクション系
-## 5パターン
-
----
-
-<!-- パターン1: title は最初のスライドで使用済み -->
-
-<!-- _class: section -->
-
-# パターン2: section
-## セクション区切り
-
-このスライドがセクション区切りのサンプルです
+### 実践事例と導入ガイド
+2025-02-02 / 技術カンファレンス
 
 ---
 
 <!-- _class: agenda -->
 
-## パターン3: agenda - アジェンダ・目次
+## 本日のアジェンダ
 
-1. 第1項目
-2. 第2項目
-3. 第3項目
-4. 第4項目
-5. 第5項目
+1. 現代のプロジェクト管理における課題
+2. アジャイル開発の基本原則と実践方法
+3. 組織変革の具体的なステップ
+4. 導入事例と成果指標
+5. よくある失敗パターンと対策
+
+---
+
+<!-- _class: section -->
+
+# なぜ今、アジャイルなのか
+## 従来の開発手法の限界
+
+---
+
+## ウォーターフォールの課題
+
+チーム内の会話は低コストだが、チーム間は調整・承認・ドキュメントが必要で高コスト。
+
+結果として、**高コストな境界でモジュールが切れる**。
+
+従来のウォーターフォール開発では、要件定義から実装、テスト、リリースまで順次進行するため、**市場の変化に対応できない**という致命的な問題があります。
+
+顧客のニーズは日々変化するのに、半年後にしかフィードバックが得られない状況では、**リリース時には既に時代遅れ**になってしまいます。
 
 ---
 
 <!-- _class: closing -->
 
-# パターン4: closing
-## クロージングスライド
+# セクション1のまとめ
 
-ご清聴ありがとうございました
-contact@example.com
+課題は明確になりました
+次は解決策を見ていきましょう
 
 ---
 
 <!-- _class: summary -->
 
-## パターン5: summary - まとめスライド
+## アジャイル開発の3つの核心価値
 
 <div class="summary-items">
 
 <div class="summary-item">
 
-### ポイント1
-ガラス風のデザインで視覚的に魅力的なまとめを表現
+### 短期的なフィードバックループ
+2週間スプリントで継続的に価値を検証し、方向転換のコストを最小化する
 
 </div>
 
 <div class="summary-item">
 
-### ポイント2
-縦並びレイアウトで読みやすさを確保
+### チーム全体の透明性
+デイリースタンドアップとレトロスペクティブで、問題を早期発見・早期解決
 
 </div>
 
 <div class="summary-item">
 
-### ポイント3
-複数のポイントを構造的に整理
+### 顧客との協調
+プロダクトオーナーを通じて顧客価値を最大化し、無駄な機能開発を排除
 
 </div>
 
@@ -98,32 +88,34 @@ contact@example.com
 
 <!-- _class: section -->
 
-# B. レイアウト系
-## 7パターン
+# 実践的な導入ステップ
+## 具体的にどう始めるか
 
 ---
 
 <!-- _class: content-2col -->
 
-## パターン6: content-2col - 2カラム基本
+## フェーズ1: パイロットチームの選定
 
 <div>
 
-### 左側コンテンツ
+### 成功しやすいチームの特徴
 
-- 2カラムレイアウト
-- 均等な幅配分
-- テキストベースの比較に最適
+- メンバー5〜9名の適切なサイズ
+- 技術スキルの多様性がある
+- 変化に前向きな文化
+- 明確なプロダクトビジョン
 
 </div>
 
 <div>
 
-### 右側コンテンツ
+### 避けるべきチームの特徴
 
-- シンプルな構成
-- 読みやすいレイアウト
-- 柔軟な使い方が可能
+- レガシーシステムに縛られている
+- 固定マインドセットが強い
+- 外部依存が多すぎる
+- 経営層のサポートがない
 
 </div>
 
@@ -131,27 +123,27 @@ contact@example.com
 
 <!-- _class: content-2col-comparison -->
 
-## パターン7: content-2col-comparison - Before/After比較
+## フェーズ2: 環境整備の重要性
 
 <div>
 
-### Before（改善前）
+### Before(導入前)
 
-- 手作業による処理
-- 時間がかかる
-- エラーが発生しやすい
-- スケールが困難
+- 手作業によるデプロイ
+- テストは週1回のみ
+- ドキュメントは数百ページのWord
+- コミュニケーションはメール中心
 
 </div>
 
 <div>
 
-### After（改善後）
+### After(導入後)
 
-- 自動化された処理
-- 高速な実行
-- エラー率の大幅な削減
-- スケーラブルな設計
+- CI/CDによる自動デプロイ
+- テストは毎コミット時に実行
+- ドキュメントはWikiで常に最新
+- Slackでリアルタイムコラボレーション
 
 </div>
 
@@ -159,35 +151,38 @@ contact@example.com
 
 <!-- _class: content-3col -->
 
-## パターン8: content-3col - 3カラム
+## フェーズ3: 基本的なセレモニーの実施
 
 <div>
 
-### カラム1
+### デイリースタンドアップ
 
-- 3つの項目を
-- 並列で表示
-- コンパクトに配置
+- 毎朝15分
+- 昨日やったこと
+- 今日やること
+- 障害はあるか
 
 </div>
 
 <div>
 
-### カラム2
+### スプリントプランニング
 
-- 機能比較
-- 選択肢の提示
-- 段階的な説明
+- スプリント開始時
+- 2週間分の計画
+- ストーリーポイント
+- タスク分解
 
 </div>
 
 <div>
 
-### カラム3
+### レトロスペクティブ
 
-- バランスの良い
-- レイアウト
-- 視覚的な整理
+- スプリント終了時
+- KPT形式
+- 改善アクション
+- 次への活かし方
 
 </div>
 
@@ -195,23 +190,27 @@ contact@example.com
 
 <!-- _class: content-image-right -->
 
-## パターン9: content-image-right - 画像右配置
+## ツールの選定と活用
 
 <div>
 
-### テキストコンテンツ
+### プロジェクト管理ツール
 
-- 左側にテキスト（2fr）
-- 右側に画像（1fr）
-- 説明と視覚要素のバランス
+**Jira、Linear、GitHub Projects**などのツールを活用することで、タスクの可視化と進捗管理が容易になります。
 
-説明文をしっかり記載しながら、右側に関連する画像やグラフを配置できます。
+ツール選定のポイント:
+- チームサイズに適した機能
+- 既存ツールとの連携性
+- カスタマイズの柔軟性
+- コストパフォーマンス
+
+導入初期は**シンプルなツールから始める**ことが成功の鍵です。
 
 </div>
 
 <div>
 
-![画像プレースホルダー](https://via.placeholder.com/400x300/1B4565/FFFFFF?text=Image)
+![ツールイメージ](https://via.placeholder.com/400x300/1B4565/FFFFFF?text=Project+Tools)
 
 </div>
 
@@ -219,52 +218,51 @@ contact@example.com
 
 <!-- _class: content-center -->
 
-## パターン10: content-center - 中央配置メッセージ
+## 最も重要なこと
 
-### 重要なメッセージを中央に配置
+### 完璧を目指すのではなく、継続的な改善を目指す
 
-シンプルで強調したいメッセージを
-画面中央に大きく表示
+アジャイルは目的地ではなく旅である
 
 ---
 
 <!-- _class: content-grid-2x2 -->
 
-## パターン11: content-grid-2x2 - 2x2グリッド
+## 成功事例: 4つの企業パターン
 
 <div>
 
-![画像1](https://via.placeholder.com/350x200/1B4565/FFFFFF?text=Image+1)
+![事例1](https://via.placeholder.com/350x200/1B4565/FFFFFF?text=Startup)
 
-### 項目1
-画像とテキストのセット1
+### スタートアップA社
+開発サイクルを3ヶ月から2週間に短縮し、リリース頻度が12倍に向上
 
 </div>
 
 <div>
 
-![画像2](https://via.placeholder.com/350x200/3E9BA4/FFFFFF?text=Image+2)
+![事例2](https://via.placeholder.com/350x200/3E9BA4/FFFFFF?text=Enterprise)
 
-### 項目2
-画像とテキストのセット2
-
-</div>
-
-<div>
-
-![画像3](https://via.placeholder.com/350x200/1ab394/FFFFFF?text=Image+3)
-
-### 項目3
-画像とテキストのセット3
+### エンタープライズB社
+チーム間のサイロ化を解消し、部門横断プロジェクトの成功率が80%向上
 
 </div>
 
 <div>
 
-![画像4](https://via.placeholder.com/350x200/4b5563/FFFFFF?text=Image+4)
+![事例3](https://via.placeholder.com/350x200/1ab394/FFFFFF?text=SaaS)
 
-### 項目4
-画像とテキストのセット4
+### SaaS企業C社
+顧客フィードバックループを確立し、機能満足度が45%から87%に改善
+
+</div>
+
+<div>
+
+![事例4](https://via.placeholder.com/350x200/4b5563/FFFFFF?text=Legacy)
+
+### レガシーシステムD社
+段階的移行により、モノリスからマイクロサービスへ3年で完全移行
 
 </div>
 
@@ -272,7 +270,7 @@ contact@example.com
 
 <!-- _class: content-steps -->
 
-## パターン12: content-steps - 縦3つステップ
+## 導入ロードマップ: 3つのフェーズ
 
 <div class="steps-container">
 
@@ -280,8 +278,8 @@ contact@example.com
 <div class="step-number">1</div>
 <div class="step-content">
 
-### 計画フェーズ
-要件定義と設計を実施し、プロジェクトの方向性を確定します。
+### 準備フェーズ (1〜2ヶ月)
+経営層の合意形成、パイロットチームの選定、基礎トレーニングの実施、ツール選定と環境構築を行います。
 
 </div>
 </div>
@@ -290,8 +288,8 @@ contact@example.com
 <div class="step-number">2</div>
 <div class="step-content">
 
-### 実装フェーズ
-設計に基づいて開発を進め、機能を実装します。
+### 実験フェーズ (3〜6ヶ月)
+最初の2〜3スプリントを実施し、問題点を洗い出します。メトリクスを収集し、定期的に振り返りを行いながら改善します。
 
 </div>
 </div>
@@ -300,8 +298,8 @@ contact@example.com
 <div class="step-number">3</div>
 <div class="step-content">
 
-### 検証フェーズ
-テストとレビューを通じて品質を確保し、リリースします。
+### 展開フェーズ (6ヶ月〜1年)
+成功事例を横展開し、他チームへの段階的な導入を進めます。組織全体のマインドセットを変革します。
 
 </div>
 </div>
@@ -312,29 +310,29 @@ contact@example.com
 
 <!-- _class: content-list-panel -->
 
-## パターン13: content-list-panel - リスト＋補足パネル
+## よくある失敗パターンと対策
 
 <div>
 
-### メインコンテンツ
+### 典型的な5つの失敗
 
-- リスト項目1
-- リスト項目2
-- リスト項目3
-- リスト項目4
-
-メインの説明文をここに記載します。
+1. **形だけのアジャイル**: セレモニーだけ導入し、本質を理解していない
+2. **経営層の無理解**: トップダウンの圧力で現場が疲弊
+3. **完璧主義**: 全てを一度に変えようとして失敗
+4. **メトリクスの誤用**: ベロシティなどを個人評価に使う
+5. **文化の無視**: 既存の組織文化と衝突
 
 </div>
 
 <div class="panel">
 
-### 補足情報
+### 成功の鍵
 
-重要な注意事項や補足説明を右側のパネルに配置できます。
+**小さく始めて、学びながら成長する**
 
-**ポイント:**
-アクセントカラーで強調
+失敗を恐れずに実験し、振り返りから学ぶ文化を育てることが最も重要です。
+
+完璧な計画よりも、行動と学習のサイクルを回すことを優先しましょう。
 
 </div>
 
@@ -342,31 +340,30 @@ contact@example.com
 
 <!-- _class: section -->
 
-# C. 強調・特殊系
-## 2パターン
+# 成果指標とKPI
+## 何を測るべきか
 
 ---
 
-## パターン14: emphasis-box - 強調ボックス（3段階）
+## 重要な4つのメトリクス
 
 <div class="box-light">
 
-**レベル1（軽い強調）**
-通常の情報ボックスとして使用
+**デプロイ頻度**: どれだけ頻繁に本番環境にデプロイできるか
+週1回 → 1日数回へ
 
 </div>
 
 <div class="box-medium">
 
-**レベル2（中程度の強調）**
-重要な情報を左ボーダー付きで強調
+**変更のリードタイム**: コミットから本番反映までの時間
+1週間 → 数時間へ
 
 </div>
 
 <div class="box-strong">
 
-レベル3（最強調）
-最も重要なメッセージを中央配置で強調
+<span style="color: #e65100; font-weight: bold;">最も重要なのは「学習のスピード」である</span>
 
 </div>
 
@@ -374,61 +371,65 @@ contact@example.com
 
 <!-- _class: stats -->
 
-## パターン15: stats - 統計・数値表示
+## 実際の導入効果(平均値)
 
 <div class="stats-container">
 
 <div class="stat-item">
-<div class="stat-number">95%</div>
-<div class="stat-label">顧客満足度</div>
+<div class="stat-number">3.2x</div>
+<div class="stat-label">デプロイ頻度の向上</div>
 </div>
 
 <div class="stat-item">
-<div class="stat-number">1,200</div>
-<div class="stat-label">導入実績</div>
+<div class="stat-number">68%</div>
+<div class="stat-label">バグ発生率の削減</div>
 </div>
 
 <div class="stat-item">
-<div class="stat-number">24h</div>
-<div class="stat-label">サポート対応</div>
+<div class="stat-number">+24%</div>
+<div class="stat-label">従業員満足度の向上</div>
 </div>
 
 </div>
 
 ---
 
-## テキスト強調クラスのサンプル
+## テキスト強調とコードの活用
 
-通常のテキストに対して、以下のような強調が可能です。
+アジャイルの本質は<span class="highlight-primary">人とコミュニケーション</span>を中心に据えることです。
 
-<span class="highlight-primary">プライマリーカラーで強調</span>
+<span class="highlight-accent">継続的な改善</span>を通じて組織全体が進化します。
 
-<span class="highlight-accent">アクセントカラーで強調</span>
+<span class="highlight-secondary">顧客価値の最大化</span>が最終目標です。
 
-<span class="highlight-secondary">セカンダリーカラーで強調</span>
+```python
+# スプリント計画の例
+class Sprint:
+    def __init__(self, duration_weeks=2):
+        self.duration = duration_weeks
+        self.stories = []
 
----
-
-## コードブロックとテーブルのサンプル
-
-```javascript
-// コードブロックのサンプル
-function example() {
-  console.log("Hello, Marp!");
-}
+    def add_story(self, story, points):
+        self.stories.append({"story": story, "points": points})
 ```
 
-| 項目 | 説明 | 備考 |
-|------|------|------|
-| パターン数 | 14 | Phase 1 |
-| カラーパレット | 3色 | プライマリー・セカンダリー・アクセント |
-| 自動要素 | 2つ | ロゴとページ番号 |
+---
+
+## 主要な概念の比較表
+
+| 手法 | リリースサイクル | フィードバック | 適用場面 |
+|------|----------------|--------------|---------|
+| ウォーターフォール | 6ヶ月〜1年 | リリース後のみ | 要件が確定している |
+| アジャイル | 2週間〜1ヶ月 | スプリント毎 | 要件が変化する |
+| DevOps | 毎日〜毎週 | リアルタイム | 継続的デリバリー |
 
 ---
 
 <!-- _class: closing -->
 
-# サンプル終了
+# Thank You
 
-全14パターンの実装が完了しました
-詳細は docs/patterns.md を参照してください
+質問はありますか？
+
+contact@example.com
+@your_twitter
