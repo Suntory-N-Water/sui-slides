@@ -1,0 +1,532 @@
+/* ========================================
+   Marp Company Theme - Phase 1
+   ======================================== */
+
+/* ========================================
+   CSS変数定義
+   ======================================== */
+:root {
+  /* カラーパレット */
+  --color-primary: #1B4565;           /* プライマリー（濃紺） */
+  --color-secondary: #3E9BA4;         /* セカンダリー（ティール） */
+  --color-accent: #1ab394;            /* アクセント（ティール系の緑） */
+
+  /* グレースケール */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+
+  /* テキストカラー */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --text-muted: #6b7280;
+
+  /* ロゴパス */
+  --logo-url: url("../assets/images/logo.png");
+
+  /* サイズ */
+  --logo-width: 50px;
+  --logo-height: 50px;
+}
+
+/* ========================================
+   基本スタイル
+   ======================================== */
+section {
+  background: #ffffff;
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 60px;
+}
+
+h1 {
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  color: var(--color-secondary);
+  margin-bottom: 0.6em;
+}
+
+/* ========================================
+   ロゴとページ番号の自動挿入
+   ======================================== */
+
+/* 全スライド（タイトル除く）にロゴ自動配置 */
+section:not(.title):not(.no-logo)::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: var(--logo-width);
+  height: var(--logo-height);
+  background-image: var(--logo-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  z-index: 100;
+}
+
+/* ページ番号（デフォルト） */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+/* タイトルスライドはページ番号非表示 */
+section.title::after {
+  display: none;
+}
+
+/* クロージングスライドはページ番号非表示 */
+section.closing::after {
+  display: none;
+}
+
+/* ========================================
+   パターン A: タイトル・セクション系
+   ======================================== */
+
+/* 1. title - タイトルスライド */
+section.title {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+section.title h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+  border-bottom: none;
+  color: var(--text-light);
+}
+
+section.title h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: var(--text-light);
+}
+
+section.title h3 {
+  font-size: 1.5em;
+  opacity: 0.9;
+  color: var(--text-light);
+}
+
+/* 2. section - セクション区切り */
+section.section {
+  background: var(--color-primary);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.section h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  border-bottom: none;
+  color: var(--text-light);
+  margin-bottom: 0.3em;
+}
+
+section.section h2 {
+  font-size: 2em;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* 3. agenda - アジェンダ・目次 */
+section.agenda h2 {
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+section.agenda ol {
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+section.agenda ol li {
+  padding: 0.3em 0;
+}
+
+/* 4. closing - クロージング */
+section.closing {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.closing h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  border-bottom: none;
+  color: var(--text-light);
+}
+
+section.closing p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* 5. summary - まとめスライド（ガラス風縦並び） */
+section.summary {
+  padding: 60px;
+}
+
+section.summary .summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+section.summary .summary-item {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(27, 69, 101, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section.summary .summary-item h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5em;
+}
+
+/* ========================================
+   パターン B: レイアウト系
+   ======================================== */
+
+/* 6. content-2col - 2カラム基本 */
+section.content-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 60px;
+}
+
+section.content-2col h2 {
+  grid-column: 1 / -1;
+}
+
+/* 7. content-2col-comparison - Before/After比較 */
+section.content-2col-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 60px;
+}
+
+section.content-2col-comparison h2 {
+  grid-column: 1 / -1;
+}
+
+section.content-2col-comparison > div:nth-of-type(1) {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--gray-200);
+}
+
+section.content-2col-comparison > div:nth-of-type(2) {
+  background: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+}
+
+/* 8. content-3col - 3カラム */
+section.content-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 60px;
+}
+
+section.content-3col h2 {
+  grid-column: 1 / -1;
+}
+
+/* 9. content-image-right - 画像右配置 */
+section.content-image-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 60px;
+}
+
+section.content-image-right h2 {
+  grid-column: 1 / -1;
+}
+
+section.content-image-right img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 10. content-center - 中央配置 */
+section.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.content-center h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+/* 11. content-grid-2x2 - 2x2グリッド */
+section.content-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 1.5rem;
+  padding: 60px;
+}
+
+section.content-grid-2x2 h2 {
+  grid-column: 1 / -1;
+}
+
+section.content-grid-2x2 > div {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+section.content-grid-2x2 img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* 12. content-steps - 縦3つステップ */
+section.content-steps {
+  padding: 60px;
+}
+
+section.content-steps .steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+section.content-steps .step-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+}
+
+section.content-steps .step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+section.content-steps .step-content h3 {
+  margin-bottom: 0.5em;
+}
+
+/* 13. content-list-panel - シンプルリスト＋補足パネル */
+section.content-list-panel {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 60px;
+}
+
+section.content-list-panel h2 {
+  grid-column: 1 / -1;
+}
+
+section.content-list-panel .panel {
+  background: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-accent);
+}
+
+section.content-list-panel .panel h3 {
+  margin-bottom: 1em;
+}
+
+/* ========================================
+   パターン C: 強調・特殊系
+   ======================================== */
+
+/* 14. emphasis-box - 強調ボックス（3段階） */
+.box-light {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.box-medium {
+  background: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--color-primary);
+}
+
+.box-strong {
+  background: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* 15. stats - 統計・数値表示 */
+section.stats {
+  padding: 60px;
+}
+
+section.stats .stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+section.stats .stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: 8px;
+}
+
+section.stats .stat-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+section.stats .stat-label {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  color: var(--text-dark);
+}
+
+/* 16. highlight-text - テキスト強調クラス */
+.highlight-primary {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.highlight-accent {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.highlight-secondary {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* ========================================
+   その他のユーティリティ
+   ======================================== */
+
+/* リスト装飾 */
+ul {
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* コードブロック */
+pre {
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  background: var(--gray-100);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* テーブル */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th {
+  background: var(--color-primary);
+  color: var(--text-light);
+  padding: 0.8em;
+  text-align: left;
+}
+
+td {
+  padding: 0.8em;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+tr:hover {
+  background: var(--gray-50);
+}
+
+/* 画像 */
+img {
+  max-width: 100%;
+  height: auto;
+}

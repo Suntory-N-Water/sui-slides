@@ -1,0 +1,39 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Node.js dependencies
+node_modules/
+pnpm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Exported presentations
+*.html
+*.pdf
+*.pptx
+*.ppt
+!*.md
+
+# Editor directories and files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache files
+.cache/
+.marp-cache/
+
+# Slides directories (uncomment if needed)
+# slides/
+.claude/plans/*

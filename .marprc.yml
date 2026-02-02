@@ -1,0 +1,7 @@
+allowLocalFiles: true
+html: true
+mermaid: true
+bespoke:
+  progress: true
+options:
+  engine: '@marp-team/marp-core'
