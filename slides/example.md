@@ -363,7 +363,7 @@ paginate: true
 
 <div class="box-strong">
 
-<span style="color: #e65100; font-weight: bold;">最も重要なのは「学習のスピード」である</span>
+最も重要なのは「学習のスピード」である
 
 </div>
 
@@ -398,7 +398,7 @@ paginate: true
 
 アジャイルの本質は<span class="highlight-primary">人とコミュニケーション</span>を中心に据えることです。
 
-<span class="highlight-accent">継続的な改善</span>を通じて組織全体が進化します。
+継続的な改善を通じて組織全体が進化します。
 
 <span class="highlight-secondary">顧客価値の最大化</span>が最終目標です。
 

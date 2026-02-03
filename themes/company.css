@@ -42,6 +42,8 @@ section {
   color: var(--text-dark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   padding: 60px;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 h1 {
@@ -49,16 +51,19 @@ h1 {
   border-bottom: 3px solid var(--color-primary);
   padding-bottom: 0.3em;
   margin-bottom: 1em;
+  font-size: 2.2em;
 }
 
 h2 {
   color: var(--color-primary);
   margin-bottom: 0.8em;
+  font-size: 1.9em;
 }
 
 h3 {
   color: var(--color-secondary);
   margin-bottom: 0.6em;
+  font-size: 1.4em;
 }
 
 /* ========================================
@@ -86,9 +91,11 @@ section::after {
   content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
   position: absolute;
   bottom: 30px;
-  right: 40px;
+  right: 30px;
+  padding: 0 !important;
   font-size: 0.8em;
   color: var(--text-muted);
+  z-index: 200;
 }
 
 /* タイトルスライドはページ番号非表示 */
@@ -201,27 +208,35 @@ section.closing p {
 /* 5. summary - まとめスライド(ガラス風縦並び) */
 section.summary {
   padding: 60px;
+  padding-bottom: 80px;
 }
 
 section.summary .summary-items {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 section.summary .summary-item {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(27, 69, 101, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 0;
+  padding: 1rem 1.2rem 1rem 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--color-primary);
 }
 
 section.summary .summary-item h3 {
   color: var(--color-primary);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
+  font-size: 1.15em;
+}
+
+section.summary .summary-item p {
+  font-size: 0.85em;
+  line-height: 1.5;
 }
 
 /* ========================================
@@ -234,10 +249,12 @@ section.content-2col {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 60px;
+  grid-template-rows: auto 1fr;
 }
 
 section.content-2col h2 {
   grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
 }
 
 /* 7. content-2col-comparison - Before/After比較 */
@@ -246,23 +263,25 @@ section.content-2col-comparison {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 60px;
+  grid-template-rows: auto 1fr;
 }
 
 section.content-2col-comparison h2 {
   grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
 }
 
 section.content-2col-comparison > div:nth-of-type(1) {
   background: var(--gray-50);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   border-left: 4px solid var(--gray-200);
 }
 
 section.content-2col-comparison > div:nth-of-type(2) {
   background: var(--gray-100);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   border-left: 4px solid var(--color-primary);
 }
 
@@ -272,10 +291,17 @@ section.content-3col {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
   padding: 60px;
+  grid-template-rows: auto 1fr;
+  align-items: start;
 }
 
 section.content-3col h2 {
   grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+section.content-3col > div {
+  align-self: start;
 }
 
 /* 9. content-image-right - 画像右配置 */
@@ -292,7 +318,7 @@ section.content-image-right h2 {
 
 section.content-image-right img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -306,8 +332,17 @@ section.content-center {
 }
 
 section.content-center h2 {
-  font-size: 2em;
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+section.content-center h3 {
+  font-size: 1.6em;
   margin-bottom: 1em;
+}
+
+section.content-center p {
+  font-size: 1.1em;
 }
 
 /* 11. content-grid-2x2 - 2x2グリッド */
@@ -315,45 +350,63 @@ section.content-grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
   padding: 60px;
+  padding-bottom: 80px;
 }
 
 section.content-grid-2x2 h2 {
   grid-column: 1 / -1;
+  margin-bottom: 1rem;
 }
 
 section.content-grid-2x2 > div {
   background: var(--gray-50);
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.2rem;
+  border-radius: 0;
+}
+
+section.content-grid-2x2 h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+section.content-grid-2x2 p {
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 
 section.content-grid-2x2 img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  border-radius: 0;
+  margin-bottom: 0.4rem;
 }
 
 /* 12. content-steps - 縦3つステップ */
 section.content-steps {
   padding: 60px;
+  padding-bottom: 80px;
+}
+
+section.content-steps h2 {
+  margin-bottom: 1rem;
 }
 
 section.content-steps .steps-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 section.content-steps .step-item {
   display: grid;
   grid-template-columns: 60px 1fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  align-items: center;
   background: var(--gray-50);
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.2rem;
+  border-radius: 0;
   border-left: 4px solid var(--color-primary);
 }
 
@@ -368,10 +421,23 @@ section.content-steps .step-number {
   justify-content: center;
   font-size: 1.8em;
   font-weight: bold;
+  flex-shrink: 0;
+  align-self: start;
+}
+
+section.content-steps .step-content {
+  align-self: start;
 }
 
 section.content-steps .step-content h3 {
-  margin-bottom: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.4em;
+  font-size: 1.2em;
+}
+
+section.content-steps .step-content p {
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 
 /* 13. content-list-panel - シンプルリスト＋補足パネル */
@@ -380,21 +446,28 @@ section.content-list-panel {
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding: 60px;
+  grid-template-rows: auto 1fr;
 }
 
 section.content-list-panel h2 {
   grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
 }
 
 section.content-list-panel .panel {
   background: var(--gray-100);
   padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--color-accent);
+  border-radius: 0;
+  border-left: 4px solid var(--color-primary);
+  align-self: start;
 }
 
 section.content-list-panel .panel h3 {
   margin-bottom: 1em;
+}
+
+section.content-list-panel > div:first-of-type {
+  align-self: start;
 }
 
 /* ========================================
@@ -405,27 +478,28 @@ section.content-list-panel .panel h3 {
 .box-light {
   background: var(--gray-50);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   margin: 1rem 0;
 }
 
 .box-medium {
   background: var(--gray-100);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   margin: 1rem 0;
   border-left: 4px solid var(--color-primary);
 }
 
 .box-strong {
-  background: var(--gray-100);
+  background: linear-gradient(135deg, rgba(26, 179, 148, 0.1), rgba(62, 155, 164, 0.1));
+  border: 2px solid var(--color-primary);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   margin: 1rem 0;
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--text-dark);
 }
 
 /* 15. stats - 統計・数値表示 */
@@ -444,7 +518,7 @@ section.stats .stat-item {
   text-align: center;
   padding: 2rem;
   background: var(--gray-50);
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 section.stats .stat-number {
@@ -465,13 +539,8 @@ section.stats .stat-label {
   font-weight: bold;
 }
 
-.highlight-accent {
-  color: var(--color-accent);
-  font-weight: bold;
-}
-
 .highlight-secondary {
-  color: var(--color-secondary);
+  color: var(--text-dark);
   font-weight: bold;
 }
 
@@ -492,7 +561,7 @@ li {
 pre {
   background: var(--gray-100);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0;
   overflow-x: auto;
 }
 
@@ -500,7 +569,7 @@ code {
   font-family: "Consolas", "Monaco", "Courier New", monospace;
   background: var(--gray-100);
   padding: 0.2em 0.4em;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 0.9em;
 }
 
