@@ -5,7 +5,7 @@ paginate: true
 ---
 
 <!-- _class: title -->
-![bg](../assets/images/background.png)
+![bg](./assets/images/background.svg)
 
 # プロジェクト管理改革
 ## アジャイル開発で変わる組織文化
@@ -232,16 +232,12 @@ paginate: true
 
 <div>
 
-![事例1](https://via.placeholder.com/350x200/1B4565/FFFFFF?text=Startup)
-
 ### スタートアップA社
 開発サイクルを3ヶ月から2週間に短縮し、リリース頻度が12倍に向上
 
 </div>
 
 <div>
-
-![事例2](https://via.placeholder.com/350x200/3E9BA4/FFFFFF?text=Enterprise)
 
 ### エンタープライズB社
 チーム間のサイロ化を解消し、部門横断プロジェクトの成功率が80%向上
@@ -250,16 +246,12 @@ paginate: true
 
 <div>
 
-![事例3](https://via.placeholder.com/350x200/1ab394/FFFFFF?text=SaaS)
-
 ### SaaS企業C社
 顧客フィードバックループを確立し、機能満足度が45%から87%に改善
 
 </div>
 
 <div>
-
-![事例4](https://via.placeholder.com/350x200/4b5563/FFFFFF?text=Legacy)
 
 ### レガシーシステムD社
 段階的移行により、モノリスからマイクロサービスへ3年で完全移行
@@ -396,11 +388,11 @@ paginate: true
 
 ## テキスト強調とコードの活用
 
-アジャイルの本質は<span class="highlight-primary">人とコミュニケーション</span>を中心に据えることです。
+アジャイルの本質は人とコミュニケーションを中心に据えることです。
 
 継続的な改善を通じて組織全体が進化します。
 
-<span class="highlight-secondary">顧客価値の最大化</span>が最終目標です。
+**顧客価値の最大化**が最終目標です。
 
 ```python
 # スプリント計画の例
