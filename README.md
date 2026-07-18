@@ -1,6 +1,6 @@
-# Marp Company Template
+# Marp Slide Themes
 
-社内用Marpプレゼンテーションテンプレート - Phase 1(14パターン実装)
+社内用Marpプレゼンテーションテンプレート。既存の `company` に加え、Claudeのサイトデザインから着想した `claude` テーマを収録しています。
 
 ## 概要
 
@@ -13,6 +13,20 @@
 - **統一されたカラーパレット**: プライマリー、セカンダリー、アクセントの3色
 - **制限付きHTML許容**: `<div>`, `<span>`, 一部インラインスタイルをサポート
 - **シンプルな構成**: テンプレートとCSSのみで保守性を確保
+- **Claude-inspired theme**: クリーム、コーラル、ダーク面とセリフ見出しを使う編集的なテーマ
+
+### Claude-inspired theme
+
+`theme: claude` を指定すると、`themes/claude.css` が適用されます。確認用サンプルは `slides/claude-theme-sample/slide.md` です。
+
+```markdown
+---
+marp: true
+theme: claude
+paginate: true
+size: 16:9
+---
+```
 
 ## セットアップ
 
