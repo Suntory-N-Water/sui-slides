@@ -38,14 +38,8 @@ section {
 }
 
 section::before {
-  content: "✣  CLAUDE-INSPIRED";
-  position: absolute;
-  left: 72px;
-  bottom: 26px;
-  color: var(--claude-muted);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  content: none;
+  display: none;
 }
 
 section::after {
