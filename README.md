@@ -14,6 +14,7 @@
 - **制限付きHTML許容**: `<div>`, `<span>`, 一部インラインスタイルをサポート
 - **シンプルな構成**: テンプレートとCSSのみで保守性を確保
 - **Claude-inspired theme**: クリーム、コーラル、ダーク面とセリフ見出しを使う編集的なテーマ
+- **Starbucks-inspired theme**: ウォームクリームの下地と4段階グリーン、罫線で区切りを作るテーマ
 
 ### Claude-inspired theme
 
@@ -27,6 +28,29 @@ paginate: true
 size: 16:9
 ---
 ```
+
+### Starbucks-inspired theme
+
+`theme: starbucks` を指定すると、`themes/starbucks.css` が適用されます。確認用サンプルは `slides/starbucks-sample/slide.md` です。
+
+```markdown
+---
+marp: true
+theme: starbucks
+paginate: true
+---
+```
+
+`company` の14パターンに加えて、以下のクラスを利用できます。
+
+| クラス | 用途 |
+| ---- | ---- |
+| `dark` / `content-dark-code` | 濃緑(House Green)の面。コードや強調セクションに使う |
+| `callout` | Green Accent の全面塗り。1メッセージを置く |
+| `reward` | クリームゴールドの面。特典・表彰の文脈のみに使う |
+| `.badge` / `.badge-reward` | ピル型ラベル。`-reward` はゴールド |
+| `.cta` / `.cta-outline` | ピル型ボタン。濃緑の面では自動で白へ反転する |
+| `.eyebrow` / `.lead` / `.caption` | 小見出し・リード文・注記 |
 
 ## セットアップ
 
