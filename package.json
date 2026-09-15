@@ -3,15 +3,13 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "marp -s slides --html --allow-local-files --theme-set ./themes",
-		"build": "marp slides --html --allow-local-files --theme-set ./themes",
-		"pdf": "marp --pdf --allow-local-files --theme-set ./themes"
+		"dev": "marp -s slides --html --allow-local-files --theme-set ./themes"
 	},
 	"marp": {
 		"themeSet": "./themes"
 	},
 	"dependencies": {
-		"@marp-team/marp-cli": "^4.2.3",
-		"@marp-team/marp-core": "^4.2.0"
+		"@marp-team/marp-cli": "^4.5.1",
+		"@marp-team/marp-core": "^4.4.0"
 	}
 }
