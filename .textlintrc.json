@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "preset-ai-words-ja": {
+      "no-ai-words": true,
+      "no-short-topic-comma": { "maxLength": 5 }
+    }
+  }
+}

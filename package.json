@@ -3,7 +3,8 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "marp -s slides --html --allow-local-files --theme-set ./themes"
+		"dev": "marp -s slides --html --allow-local-files --theme-set ./themes",
+		"lint:text": "textlint \"slides/**/*.md\""
 	},
 	"marp": {
 		"themeSet": "./themes"
@@ -11,5 +12,9 @@
 	"dependencies": {
 		"@marp-team/marp-cli": "^4.5.1",
 		"@marp-team/marp-core": "^4.4.0"
+	},
+	"devDependencies": {
+		"textlint": "^15.8.0",
+		"textlint-rule-preset-ai-words-ja": "^1.2.0"
 	}
 }
