@@ -70,6 +70,8 @@ section {
 	font-weight: 400;
 	line-height: 1.6;
 	letter-spacing: 0.01em;
+	/* 日本語は単語間の空白がなくどこでも改行されるため、文節単位に折り返す */
+	word-break: auto-phrase;
 }
 
 section::after {
@@ -83,6 +85,7 @@ section::after {
 	padding: 0 !important;
 	color: var(--claude-muted-soft);
 	font-size: var(--claude-fs-3xs);
+	font-variant-numeric: tabular-nums;
 }
 
 h1,
@@ -93,6 +96,8 @@ h3 {
 	font-family: var(--claude-sans);
 	/* 日本語見出しは字面が詰まって見えないため、欧文より控えめに詰める */
 	letter-spacing: -0.01em;
+	/* balance は行長を揃えるために文節の途中で折り返すため、日本語では使わない */
+	text-wrap: pretty;
 }
 
 h1 {
@@ -114,6 +119,11 @@ h3 {
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 1.35;
+}
+
+p,
+li {
+	text-wrap: pretty;
 }
 
 p {
@@ -334,6 +344,7 @@ section.agenda li::before {
 	color: var(--claude-coral);
 	font-size: 36px;
 	font-weight: 700;
+	font-variant-numeric: tabular-nums;
 	line-height: 1;
 	letter-spacing: -0.02em;
 }
@@ -545,6 +556,7 @@ section.content-steps .step-number {
 	color: var(--claude-coral);
 	font-size: var(--claude-fs-2xl);
 	font-weight: 700;
+	font-variant-numeric: tabular-nums;
 	line-height: 1;
 	letter-spacing: -0.03em;
 }
@@ -563,6 +575,7 @@ section.stats .stat-number {
 	color: var(--claude-coral);
 	font-size: var(--claude-fs-4xl);
 	font-weight: 700;
+	font-variant-numeric: tabular-nums;
 	line-height: 1;
 	letter-spacing: -0.03em;
 }
@@ -614,6 +627,21 @@ section.content-dark-code pre {
 	background: var(--claude-dark-elevated);
 }
 
+/* 明色前提の code 背景を濃色面に持ち込むと、その一語だけが白く抜けて見える */
+section.dark code,
+section.closing code,
+section.section code,
+section.callout code,
+section.content-dark-code code {
+	background: rgba(250, 249, 245, 0.1);
+	color: inherit;
+}
+
+section.dark pre code,
+section.content-dark-code pre code {
+	background: transparent;
+}
+
 .status-line {
 	margin: 0 0 14px;
 	color: var(--claude-teal);
@@ -649,6 +677,47 @@ section.callout h2 {
 section.callout p {
 	max-width: 800px;
 	font-size: var(--claude-fs-base);
+}
+
+/* 会話の例示。等幅で組むと日本語と英数字で行頭が揃わないため、本文の書体で行ごとに区切る */
+.chat {
+	margin-top: var(--claude-space-2);
+}
+
+.chat-row {
+	display: grid;
+	grid-template-columns: 72px 1fr;
+	gap: var(--claude-space-2);
+	border-top: var(--claude-rule-hair);
+	padding: 12px 0;
+	font-size: var(--claude-fs-xs);
+	line-height: 1.6;
+}
+
+.chat-who {
+	color: var(--claude-muted);
+	font-size: var(--claude-fs-3xs);
+	/* 発言の 1 行目とベースラインを合わせる */
+	line-height: 1.85;
+}
+
+.chat-row.is-agent .chat-who {
+	color: var(--claude-coral);
+}
+
+.chat-aside {
+	display: block;
+	margin-top: 4px;
+	color: var(--claude-muted);
+	font-size: var(--claude-fs-3xs);
+}
+
+/* 会話の切れ目。行の区切りより太い罫線で、前後が別のやり取りだと示す */
+.chat-break {
+	border-top: var(--claude-rule-accent);
+	padding: 12px 0;
+	color: var(--claude-coral);
+	font-size: var(--claude-fs-3xs);
 }
 
 .badge {
