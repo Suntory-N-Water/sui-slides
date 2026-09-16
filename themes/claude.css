@@ -70,8 +70,9 @@ section {
 	font-weight: 400;
 	line-height: 1.6;
 	letter-spacing: 0.01em;
-	/* 日本語は単語間の空白がなくどこでも改行されるため、文節単位に折り返す */
-	word-break: auto-phrase;
+	/* 日本語の単語途中での意図しない改行を防ぐため normal とし、溢れだけ break-word で折る */
+	word-break: normal;
+	overflow-wrap: break-word;
 }
 
 section::after {
@@ -180,6 +181,7 @@ code {
 	padding: 0.12em 0.34em;
 	font-family: var(--claude-mono);
 	font-size: 0.86em;
+	white-space: nowrap;
 }
 
 pre {
@@ -197,6 +199,7 @@ pre code {
 	background: transparent;
 	padding: 0;
 	color: inherit;
+	white-space: pre;
 }
 
 blockquote {
@@ -291,7 +294,7 @@ section.closing h2 {
 
 section.section h1,
 section.closing h1 {
-	max-width: 940px;
+	max-width: 1040px;
 	font-size: 64px;
 }
 
@@ -450,7 +453,7 @@ section.content-center h3 {
 }
 
 section.content-center p {
-	max-width: 820px;
+	max-width: 880px;
 	font-size: 22px;
 }
 
@@ -483,7 +486,7 @@ section.content-grid-2x2 p {
 }
 
 section.content-list-panel {
-	grid-template-columns: 1.4fr 0.8fr;
+	grid-template-columns: 1.15fr 1fr;
 }
 
 /* 補足カラムの縦罫を版面の下端まで通し、2カラムの領域を線で確定させる */
@@ -611,7 +614,7 @@ section.content-dark-code strong {
 }
 
 section.content-dark-code {
-	grid-template-columns: 0.85fr 1.15fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 section.content-dark-code > div {
